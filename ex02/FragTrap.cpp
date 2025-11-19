@@ -11,16 +11,14 @@ FragTrap::FragTrap(){
 	std::cout << "Frag trap " << this->getName() << " is undead" << std::endl;
 }
 
-FragTrap::FragTrap(const std::string& name){
-	this->setName(name);
+FragTrap::FragTrap(const std::string& name): ClapTrap(name){
 	this->setHp(100);
 	this->setEnergy(100);
 	this->setPower(30);
 	std::cout << "Frag trap " << this->getName() << " is undead" << std::endl;
 }
 
-FragTrap::FragTrap(const FragTrap& trap){
-	this->setName(trap.getName());
+FragTrap::FragTrap(const FragTrap& trap): ClapTrap(trap.name){
 	this->setHp(100);
 	this->setEnergy(100);
 	this->setPower(30);
