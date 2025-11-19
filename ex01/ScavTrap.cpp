@@ -1,5 +1,9 @@
 #include "ScavTrap.hpp"
 
+ScavTrap::~ScavTrap(){
+	std::cout << "Scav trap " << this->getName() << " is unundead" << std::endl;
+}
+
 ScavTrap::ScavTrap(){
 	this->setHp(100);
 	this->setEnergy(50);

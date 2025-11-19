@@ -1,10 +1,14 @@
-NAME = claptrap
+NAME = fragtrap
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 FILES = ClapTrap.cpp\
+		ScavTrap.cpp\
+		FragTrap.cpp\
 		main.cpp
 
-HFILES = ClapTrap.hpp
+HFILES = ClapTrap.hpp\
+		ScavTrap.hpp\
+		FragTrap.hpp
 
 OBJ = $(FILES:.cpp=.o)
 
@@ -16,11 +20,11 @@ $(NAME): $(OBJ) $(HFILES)
 	$(CC) $(CFLAGS)  $(OBJ) -o $(NAME)
 
 
-%.o : %.c $(HFILES)
+%.o : %.cpp $(HFILES)
 	$(CC) $(CFLAGS) -c -O  $< -o $@
 	
 clean :
-	rm -f $(OBJ) $(BOBJ)
+	rm -f $(OBJ)
 
 fclean : clean
 	rm -f $(NAME)

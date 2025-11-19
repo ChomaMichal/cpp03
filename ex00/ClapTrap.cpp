@@ -14,6 +14,9 @@ ClapTrap::ClapTrap(ClapTrap& trap)
 
 ClapTrap&	ClapTrap::operator=(ClapTrap& trap){
 	this->name = trap.name;
+	this->hp = trap.hp;
+	this->energy = trap.energy;
+	this->power = trap.power;
 	std::cout << "Clap trap " << this->name << " is equaled" << std::endl;
 	return (*this);
 }

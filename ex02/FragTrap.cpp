@@ -1,5 +1,9 @@
 #include "FragTrap.hpp"
 
+FragTrap::~FragTrap(){
+	std::cout << "Frag trap " << this->getName() << " is unundead" << std::endl;
+}
+
 FragTrap::FragTrap(){
 	this->setHp(100);
 	this->setEnergy(100);
