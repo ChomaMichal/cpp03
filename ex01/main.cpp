@@ -11,19 +11,20 @@ int main(){
 	ScavTrap	trap3("ScavTrap3");
 	std::cout << trap3 << std::endl;
 
-	for (int i = 0; i < 120; i ++){
-		trap2.attack("hehe");
-		std::cout << trap2 << std::endl;
-	}
-
-	for (int i = 0; i < 60; i ++){
-		trap1.takeDamage(2);
-		std::cout << trap1 << std::endl;
-	}
-
-	for (int i = 0; i < 150; i ++){
-		trap3.beRepaired(2);
-		std::cout << trap3 << std::endl;
-	}
+	trap2.attack("haha");
+	// for (int i = 0; i < 120; i ++){
+	// 	trap2.attack("hehe");
+	// 	std::cout << trap2 << std::endl;
+	// }
+	//
+	// for (int i = 0; i < 60; i ++){
+	// 	trap1.takeDamage(2);
+	// 	std::cout << trap1 << std::endl;
+	// }
+	//
+	// for (int i = 0; i < 150; i ++){
+	// 	trap3.beRepaired(2);
+	// 	std::cout << trap3 << std::endl;
+	// }
 	trap3.guardGate();
 }
